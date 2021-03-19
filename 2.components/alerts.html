@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
+</head>
+
+<body>
+    <nav class="black">
+        <div class="nav-wrapper ">
+            <a href="" class="brand-logo right">Front End</a>
+            <a href="" data-target="menuResponsive" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="left hide-on-med-and-down">
+                <li><a href="">item 1</a></li>
+                <li><a href="">item 2</a></li>
+                <li><a href="">item 3</a></li>
+                <li>
+                    <a href="#" class="dropdown-trigger" data-target="mydrop">
+                        Dropdown
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                    <ul id="mydrop" class="dropdown-content">
+                        <li><a href="">item 1</a></li>
+                        <li><a href="">item 2</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">item 3</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="menuResponsive">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+    </ul>
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+                <div class="slider">
+                    <ul class="slides">
+                        <li><img src="https://cdn.pixabay.com/photo/2015/07/27/22/53/railroad-tracks-863675_960_720.jpg" alt="">
+                            <div class="caption right-align">
+                                <h3>title</h3>
+                                <p>lorem</p>
+                            </div>
+                        </li>
+                        <li><img  src="https://cdn.pixabay.com/photo/2015/09/06/00/46/yellow-926728_960_720.jpg" alt="">
+                            <div class="caption left-align">
+                                <h3>title</h3>
+                                <p>lorem</p>
+                            </div>
+                        </li>
+                        <li><img src="https://cdn.pixabay.com/photo/2015/07/31/15/01/girl-869213_960_720.jpg" alt="">
+                            <div class="caption left-align">
+                                <h3>title</h3>
+                                <p>lorem</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+             
+             
+                <div class="fixed-action-btn">
+                    <a href="" class="btn-floating btn-large black"><i class="material-icons">mode_edit</i></a>
+                    <ul>
+                        <li><a href="" class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+                        <li><a href="" class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+                        <li><a href="" class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+                        <li><a href="" class="btn-floating"><i class="material-icons">insert_chart</i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="section">
+                    <img src="https://cdn.pixabay.com/photo/2015/01/12/10/45/man-597179_960_720.jpg" alt="" class="responsive-img materialboxed">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 lg1">
+                <a href="#" onclick="customAlert()" class="btn">Alert</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+        function customAlert(){
+            M.toast({
+            html:'Sent Form'
+        })
+        }
+       
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var menu = document.querySelectorAll(`.fixed-action-btn`);
+            var items = M.FloatingActionButton.init(menu, {
+                direction: 'left'
+            });
+
+         
+            var slider = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(slider, {
+               indicators: false,
+               height: 500,
+               intervalo: 3000
+            });
+
+
+            var elems = document.querySelectorAll('.materialboxed');
+            var other = M.Materialbox.init(elems);
+        })
+
+    </script>
+
+</body>
+
+</html>

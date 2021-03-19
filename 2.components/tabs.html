@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize</title>
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   
+            
+</head>
+<body>
+
+   <div class="section container">
+       <h1 class="red-text"> Tabs Cards</h1>
+       <br>
+    <div class="row">
+        <div class="col s12">
+            <div class="card black white-text">
+                <div class="card-content white-text">
+                    <p>lorem</p>
+                </div>
+
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width red-text">
+                        <li class="tab"><a href="text1" class="text1">Text 1</a></li>
+                        <li class="tab"><a href="text2" class="text2">Text 2</a></li>
+                        <li class="tab"><a href="text3" class="text3">Text 3</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <div id="text1">lorem ipsum 1</div>
+                    <div id="text2">lorem ipsum 2</div>
+                    <div id="text3">lorem ipsum 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+   </div>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            M.AutoInit();
+        })
+    </script>
+
+    </body>
+</html>
